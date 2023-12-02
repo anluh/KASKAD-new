@@ -1,0 +1,386 @@
+$font-stack: -apple-system, BlinkMacSystemFont, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+body {
+  font-family: $font-stack;
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+//============ HEADER ============
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 0 10px 0px #3333336e;
+}
+
+.main-header {
+  background-color: $black;
+  color: $white;
+  letter-spacing: 1px;
+
+  &--wrapper {
+    border: 5px solid $orange;
+    padding: 20px 0 0;
+    text-align: center;
+    transition: padding-top 0.2s ease-in-out;
+
+    .collapsed & {
+      padding-top: 0;
+    }
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  &__title {
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__logo {
+    font-family: Alentine, sans-serif;
+    font-size: 60px;
+    transition: font-size 0.2s ease-in-out;
+
+    .collapsed & {
+      font-size: 40px;
+    }
+  }
+
+  &__sub-title {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  &__menu {
+    font-family: Rounds, sans-serif;
+    font-size: 60px;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    line-height: 70px;
+  }
+}
+
+//============ SUB HEADER ============
+
+.sub-header {
+  background-color: $white;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $black;
+        padding: 6px;
+        background-color: $gray;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+//============ CONTENT ============
+
+main {
+  color: black;
+  background: $orange;
+  padding: 1px 0 50px;
+  margin-top: 308px;
+  transition: margin-top 0.2s ease-in-out;
+
+  .collapsed & {
+    margin-top: 200px;
+  }
+}
+
+.prices {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 25px;
+}
+
+.title-img {
+  text-align: center;
+  padding: 40px 0 10px;
+
+  img {
+    max-width: 90%;
+
+    img {
+      width: 20rem;
+    }
+  }
+}
+
+h2 {
+  display: block;
+  font-family: Mojito, sans-serif;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 40px;
+}
+
+.menu-item {
+  background-color: $white;
+  padding: 20px 40px 0;
+  margin-bottom: -1px;
+
+  &:first-child {
+    padding-top: 40px;
+  }
+  &:last-child {
+    padding-bottom: 40px;
+  }
+
+  &:not(:last-child):after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #000;
+    margin: 30px auto 0;
+    width: 40%;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 2px;
+    letter-spacing: 1;
+
+    .small-list & {
+      font-size: 18px;
+    }
+  }
+
+  mark {
+    background-color: transparent;
+    color: $orange;
+
+    span:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-family: Palatino, sans-serif;
+    line-height: 16px;
+  }
+}
+
+.desert {
+  h3 {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+.line:after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #000;
+  margin: 30px auto 0;
+  width: 40%;
+}
+
+#coffee {
+  font-size: 50px;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 7px;
+
+  mark {
+    font-weight: bold;
+    font-size: 23px;
+    font-family: Helvetica, sans-serif;
+  }
+
+  &.info {
+    font-family: Mojito, sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1;
+  }
+}
+.drinks {
+  .logos {
+    display: flex;
+    justify-content: space-between;
+
+    & > div:first-child {
+      margin-right: 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p.info {
+    font-size: 25px;
+    letter-spacing: 1;
+
+    & > span {
+      font-family: Helvetica, sans-serif;
+      font-size: 14px;
+
+      mark {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+
+    h3 {
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      .right {
+        flex-shrink: 0;
+
+        & > span {
+          font-size: 14px;
+          font-weight: normal;
+
+          mark {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .frap {
+    position: relative;
+
+    p {
+      font-family: Helvetica, sans-serif;
+      text-transform: uppercase;
+      color: $black;
+      font-size: 40px;
+      font-weight: bold;
+      margin: 60px 0 50px;
+      letter-spacing: 1px;
+      justify-content: center;
+    }
+
+    img {
+      position: absolute;
+      right: 10px;
+      bottom: -30px;
+      max-height: 23px;
+    }
+
+    &--info {
+      position: relative;
+      margin-top: 70px;
+
+      p {
+        font-size: 14px;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      img {
+        position: absolute;
+        max-height: 100px;
+        right: -10px;
+        top: -35px;
+      }
+
+      .line:after {
+        margin: 20px auto;
+      }
+
+      &__bottom {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//============ FOOTER ============
+
+.footer {
+  background-color: $dark;
+  color: $white;
+  text-align: center;
+  font-family: Mojito, sans-serif;
+  font-size: 35px;
+  padding: 30px 0;
+
+  &__subtitle {
+    font-size: 60px;
+    line-height: 50px;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 20px auto;
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Final state of the entering element and initial state of the leaving element */
+.slide-enter-to,
+.slide-leave-from {
+  max-height: 2000px; /* Adjust this value to suit the maximum possible height of your content */
+  opacity: 1;
+}
+
+/* Transition for entering and leaving */
+.slide-enter-active,
+.slide-leave-active {
+  transition: max-height 0.15s ease, opacity 0.15s ease;
+}

@@ -1,9 +1,11 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import VHeader from '../components/VHeader.vue';
+import MainMenu from '../components/MainMenu.vue';
+import VFooter from '../components/VFooter.vue';
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <VHeader />
+  <MainMenu />
+  <VFooter />
 </template>
