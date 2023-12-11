@@ -136,14 +136,13 @@ main {
 
 h2 {
   display: block;
-  font-family: Mojito, sans-serif;
+  font-family: Kyiv, sans-serif;
   text-align: center;
-  font-size: 60px;
+  font-size: 38px;
   margin-top: 40px;
 }
 
 .menu-item {
-  background-color: $white;
   padding: 20px 40px 0;
   margin-bottom: -1px;
 
@@ -209,10 +208,6 @@ h2 {
   background-color: #000;
   margin: 30px auto 0;
   width: 40%;
-}
-
-#coffee {
-  font-size: 50px;
 }
 
 p {

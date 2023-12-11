@@ -22,13 +22,9 @@ getData();
     <div class="container">
       <div
         id="pizza"
-        class="title-img"
         v-if="menuData.pizza.length"
       >
-        <img
-          src="/title.svg"
-          alt="title"
-        />
+        <h2>Ваша улюблена піца!</h2>
       </div>
       <section v-if="menuData.pizza.length">
         <div
@@ -68,11 +64,10 @@ getData();
         Десерти
       </h2>
       <section v-if="menuData.deserts.length">
-        <div class="desert menu-item">
-          <h3>Бельгійські вафлі</h3>
-          <p v-for="item in menuData.deserts">
-            {{ item.name }}<mark>{{ item.price }}</mark>
-          </p>
+        <div class="menu-item"><h3 class="center">Бельгійські вафлі</h3></div>
+        <div class="menu-item" v-for="item in menuData.deserts">
+          <h3>{{ item.name }}<mark>{{ item.price }}</mark></h3>
+          <p v-if="item.desc">{{ item.desc }}</p>
         </div>
       </section>
 
